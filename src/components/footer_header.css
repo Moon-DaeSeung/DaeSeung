@@ -8,37 +8,102 @@
     padding:0px;
     display: grid;
     column-gap: 3.3%;
-    grid-template-columns: 60% 10% 10% 10%;
-    grid-template-rows: 50% 50%;
-    
+    grid-template-columns: 60% 8% 8% 8%;
+    grid-template-rows: 40% 40%;
+    justify-content: center; 
 }
 
-.header_container>div {
+.header_item {
     font-size: 20px;
     font-weight: bold;
     color: white;
    
     grid-row: 2/3;
     text-align: match-parent;
-    margin-top:80px;
+    margin-top:100px;
 }
-.header_container>div:nth-child(1) {
+.header_item:nth-child(1) {
    font-size: 40px;
-   margin-top:50px;
+   margin-top:80px;
 }
-.header_container>div:nth-child(2) { 
+.header_item:nth-child(2) { 
     
     text-align: right;
 }
-.header_container>div:nth-child(3) { 
+.header_item:nth-child(3) { 
     text-align: center;
-    margin-top: 80px;
+    
 }
-.header_container>div:nth-child(4) {
-   
+.header_item:nth-child(4) {
+    text-align: left;
 }
 .footer_container {
 
     background-image: url(../img/footer-background-01.jpg) ;
-    height: 250px;
+    min-height: 250px;
+    display: grid;
+    grid-template-columns: 10% 30% 10% 20% 20% 10%;
+    grid-template-rows: 20% 40% 20% 15%;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: grey;
+}
+.contact{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: 10%;
+}
+
+.self{
+   grid-column: 4/6;
+   grid-row: 3/4;
+}
+.whoami{
+   grid-row: 2/3;
+   grid-column: 4/6;
+   font-size: 40px;
+   
+}
+
+
+
+@media screen and (max-width:780px){
+
+
+    .header_container {
+  
+     
+        display: grid;
+        column-gap: 3.3%;
+        grid-template-columns: 58% 7% 8% 8%;
+        grid-template-rows: 40% 40%;
+        justify-content: center; 
+    }
+
+    .header_item:nth-child(1) {
+        font-size: 30px;
+        margin-top:30%;
+    }
+    .header_item:nth-child(2){
+       font-size: 14px;
+       text-align: left;
+    }
+    .header_item:nth-child(3){
+        font-size: 14px;
+        text-align: left;
+        margin-top: 255%;
+    }
+    .header_item:nth-child(4){
+        font-size: 14px;
+        text-align: left;
+        margin-right: 3px;
+    }
+    
+    .header_container {
+        height: 200px;
+    }
+    .footer_container {
+        height: 100px;
+        font-size: 10px;
+    }
 }
